@@ -1,225 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light">
-<title>Égalys – L'égalité reconnue, les progrès démontrés</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
---bg:#fff;--pt:#0F4C45;--pt2:#0a3732;--be:#C3B29E;--be2:#8f7a5e;--ca:#F7F5F0;--tx:#17201e;--mu:#4d5a57;--ln:#e6e1d8;color-scheme:light}
-html{scroll-padding-top:env(safe-area-inset-top,0px);font-size:100%}
-html.big{font-size:118%}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 1.0625rem/1.7 Outfit,system-ui,sans-serif}
-h1,h2,h3{font-weight:700;line-height:1.12;margin:0;letter-spacing:-.02em;color:var(--pt)}
-a{color:var(--pt)}
-:focus-visible{outline:3px solid var(--be2);outline-offset:3px;border-radius:4px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.skip{position:absolute;left:12px;top:-60px;background:var(--pt);color:#fff;padding:10px 16px;border-radius:8px;z-index:20}
-.skip:focus{top:12px}
-.w{max-width:1120px;margin:0 auto;padding:0 24px}
-header{background:var(--bg);border-bottom:1px solid var(--ln);position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top,0px)}
-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:72px;flex-wrap:wrap;padding:8px 0}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.5rem Outfit,sans-serif;color:var(--pt);letter-spacing:.04em}
-.brand svg{width:34px;height:38px}
-.nl{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.nl a{text-decoration:none;color:var(--tx);font-weight:500;padding:10px 16px;border-radius:99px}
-.nl a:hover{background:var(--ca)}
-.nl a.on{background:var(--pt);color:#fff}
-.tz{border:1.5px solid var(--pt);background:#fff;color:var(--pt);border-radius:99px;padding:8px 14px;font:600 .9rem Outfit,sans-serif;cursor:pointer}
-.pg{display:none}.pg.on{display:block}
-@media(prefers-reduced-motion:no-preference){.pg.on{animation:in .4s ease}@keyframes in{from{opacity:0;transform:translateY(8px)}}}
-.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center;padding:72px 0}
-@media(max-width:860px){.hero{grid-template-columns:1fr;padding:40px 0;gap:32px}.hero .lg{order:-1;max-width:260px}}
-.tag{display:inline-block;background:var(--ca);color:var(--pt);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:99px;margin-bottom:22px;border:1px solid var(--ln)}
-.hero h1{font-size:clamp(2.4rem,5.6vw,4.2rem);font-weight:800}
-.hero h1 span{color:var(--be2)}
-.hero p.l{font-size:1.25rem;color:var(--mu);margin:22px 0 34px;max-width:540px}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--pt);color:#fff;border:2px solid var(--pt);padding:15px 30px;border-radius:99px;font:600 1.05rem Outfit,sans-serif;text-decoration:none;cursor:pointer;transition:background .15s}
-.btn:hover{background:var(--pt2)}
-.btn.o{background:#fff;color:var(--pt)}.btn.o:hover{background:var(--ca)}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.lg{background:var(--ca);border-radius:36px;padding:44px;display:grid;place-items:center;aspect-ratio:1;max-width:460px;justify-self:center;width:100%}
-.lg svg{width:100%;max-width:300px;height:auto}
-.sec{padding:72px 0}.sec.ca{background:var(--ca)}
-.k{display:block;color:var(--be2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;margin-bottom:12px}
-h2{font-size:clamp(1.9rem,3.8vw,2.8rem)}
-.sub{color:var(--mu);font-size:1.15rem;max-width:620px;margin:14px 0 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px}
-.cd{background:#fff;border:1px solid var(--ln);border-radius:24px;padding:32px}
-.sec.ca .cd{border-color:transparent}
-.cd .n{width:48px;height:48px;border-radius:50%;background:var(--pt);color:#fff;display:grid;place-items:center;font-weight:700;font-size:1.2rem;margin-bottom:18px}
-.cd h3{font-size:1.4rem;margin-bottom:8px}.cd p{margin:0;color:var(--mu)}
-.assure{display:flex;gap:18px;align-items:flex-start;background:var(--pt);color:#fff;border-radius:28px;padding:36px;margin-top:40px}
-.assure svg{flex:none;width:44px;height:44px}
-.assure h3{color:#fff;font-size:1.5rem;margin-bottom:6px}.assure p{margin:0;color:#e8f0ee}
-.ph{padding:56px 0 16px}
-.ph h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800}
-.lv{display:grid;gap:16px;margin-top:32px}
-.lr{display:grid;grid-template-columns:72px 1fr auto;gap:20px;align-items:center;border:1px solid var(--ln);border-radius:24px;padding:24px 28px;background:#fff}
-.lr .d{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.3rem;color:#fff}
-.lr h3{font-size:1.5rem}.lr p{margin:2px 0 0;color:var(--mu)}
-.lr .s{font-weight:700;background:var(--ca);color:var(--pt);padding:8px 16px;border-radius:99px;white-space:nowrap}
-@media(max-width:640px){.lr{grid-template-columns:56px 1fr}.lr .s{grid-column:1/-1;justify-self:start}}
-.l1{background:var(--be2)}.l2{background:#6f8f86}.l3{background:#2c6b62}.l4{background:var(--pt)}
-.drop{display:block;border:2.5px dashed var(--pt);background:var(--ca);border-radius:28px;padding:52px 24px;text-align:center;cursor:pointer;margin-top:28px}
-.drop:hover,.drop.o{background:#efeadf}
-.drop h3{font-size:1.7rem}.drop p{margin:8px 0 0;color:var(--mu)}
-.fmt{background:var(--ca);border-radius:20px;padding:22px 26px;margin-top:20px}
-.fmt code{display:block;font:500 .95rem ui-monospace,Menlo,monospace;white-space:pre;overflow-x:auto;margin-top:8px}
-#err{color:#a12a1a;font-weight:600;margin-top:16px}
-#res{display:none;padding:48px 0 80px}
-.top{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:800px){.top{grid-template-columns:1fr}}
-.pn{border:1px solid var(--ln);border-radius:28px;padding:36px;background:#fff}
-.pn.g{background:var(--pt);border-color:var(--pt);color:#fff}
-.pn.g .k{color:var(--be)}
-.big{font:800 clamp(5rem,12vw,8rem)/.9 Outfit,sans-serif;letter-spacing:-.05em}
-.big small{font-size:.25em;font-weight:500;opacity:.8;letter-spacing:0}
-.pbar{height:14px;background:rgba(255,255,255,.2);border-radius:99px;margin:26px 0 10px;overflow:hidden}
-.pbar i{display:block;height:100%;width:0;background:var(--be);border-radius:99px;transition:width 1.2s ease}
-.lbl{display:inline-block;background:#fff;color:var(--pt);font-weight:800;font-size:1.3rem;padding:10px 22px;border-radius:99px;margin-top:12px}
-#msg{margin:16px 0 0;color:#e8f0ee}
-.kv{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px;margin-bottom:28px}
-.kv b{display:block;font-size:2rem;font-weight:700;color:var(--pt);line-height:1.1}.kv span{font-size:.95rem;color:var(--mu)}
-.bar{display:flex;align-items:center;gap:12px;margin:12px 0;font-weight:500}
-.bar i{display:block;height:30px;border-radius:8px}
-.tw{overflow-x:auto;margin-top:28px;border:1px solid var(--ln);border-radius:24px;padding:28px}
-table{width:100%;border-collapse:collapse}
-th{font-size:.85rem;color:var(--mu);text-align:right;padding:10px;border-bottom:2px solid var(--ln);font-weight:600}
-td{padding:14px 10px;text-align:right;border-bottom:1px solid var(--ln);white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
-@media(max-width:800px){.two{grid-template-columns:1fr}}
-.two h3{font-size:1.45rem;margin-bottom:10px}.two p,.two li{color:var(--mu);margin:0 0 8px}.two ul{padding-left:20px;margin:0}
-details{border:1px solid var(--ln);border-radius:18px;padding:18px 24px;margin-top:12px;background:#fff}
-summary{font-weight:600;cursor:pointer;color:var(--pt);font-size:1.1rem}
-details p{color:var(--mu);margin:10px 0 0}
-footer{background:var(--pt);color:#e8f0ee;padding:40px 0;margin-top:0}
-footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-footer .brand{color:#fff}
-@media print{header,footer,.drop,.btn,.fmt{display:none}}
-</style>
-</head>
-<body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="mk" viewBox="0 0 100 112"><circle cx="36" cy="12" r="9.5" fill="#0F4C45"/><circle cx="72" cy="10" r="8" fill="#C3B29E"/><path d="M49 32A36 36 0 0 0 49 104L49 91A23 23 0 0 1 49 45Z" fill="#0F4C45"/><path d="M55 32A36 36 0 0 1 55 104L55 91A23 23 0 0 0 55 45Z" fill="#C3B29E"/><rect x="39" y="60" width="26" height="6" fill="#C3B29E"/><rect x="39" y="72" width="26" height="6" fill="#9aa592"/></symbol></defs></svg>
-<a class="skip" href="#main">Aller au contenu</a>
-<header><div class="w"><nav aria-label="Navigation principale">
-<a class="brand" href="#/" aria-label="Égalys, accueil"><svg aria-hidden="true"><use href="#mk"/></svg><span aria-hidden="true">ÉGΛLYS</span></a>
-<div class="nl"><a href="#/" data-p="">Accueil</a><a href="#/label" data-p="label">Le label</a><a href="#/analyse" data-p="analyse">Analyser</a><a href="#/aide" data-p="aide">Aide</a>
-<button class="tz" id="tz" aria-pressed="false" title="Agrandir le texte">A+ Texte</button></div>
-</nav></div></header>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <title>Égalys – L'égalité reconnue, les progrès démontrés</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="mk" viewBox="0 0 100 112">
+          <circle cx="36" cy="12" r="9.5" fill="#0F4C45" />
+          <circle cx="72" cy="10" r="8" fill="#C3B29E" />
+          <path
+            d="M49 32A36 36 0 0 0 49 104L49 91A23 23 0 0 1 49 45Z"
+            fill="#0F4C45"
+          />
+          <path
+            d="M55 32A36 36 0 0 1 55 104L55 91A23 23 0 0 0 55 45Z"
+            fill="#C3B29E"
+          />
+          <rect x="39" y="60" width="26" height="6" fill="#C3B29E" />
+          <rect x="39" y="72" width="26" height="6" fill="#9aa592" />
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip" href="#main">Aller au contenu</a>
+    <header>
+      <div class="w">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html" aria-label="Égalys, accueil"
+            ><svg aria-hidden="true"><use href="#mk" /></svg
+            ><span aria-hidden="true">ÉGΛLYS</span></a
+          >
+          <div class="nl">
+            <a href="index.html" class="on" aria-current="page">Accueil</a
+            ><a href="label.html">Le label</a><a href="analyse.html">Analyser</a
+            ><a href="aide.html">Aide</a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-<main id="main" tabindex="-1">
-<!-- ACCUEIL -->
-<div class="pg" data-p="">
-<div class="w"><div class="hero">
-<div><span class="tag">L'égalité reconnue</span>
-<h1>Les salaires sont-ils <span>vraiment</span> égaux ?</h1>
-<p class="l">Déposez un fichier de paie anonymisé. En quelques secondes, Égalys mesure l'écart entre femmes et hommes et vous remet un score et un label.</p>
-<div class="btns"><a class="btn" href="#/analyse">Mesurer mon écart</a><a class="btn o" href="#/label">Découvrir le label</a></div></div>
-<div class="lg"><svg viewBox="0 0 100 112" role="img" aria-label="Logo Égalys : deux personnes autour d'un signe égal"><use href="#mk"/></svg></div>
-</div></div>
-<div class="sec ca"><div class="w"><span class="k">Comment ça marche</span><h2>Trois étapes, aucune compétence technique.</h2>
-<div class="cards">
-<div class="cd"><div class="n">1</div><h3>Je dépose mon fichier</h3><p>Un tableau Excel ou CSV avec le genre, le poste et le salaire. Sans aucun nom.</p></div>
-<div class="cd"><div class="n">2</div><h3>Égalys calcule</h3><p>L'écart est mesuré à poste comparable, pour comparer ce qui est comparable.</p></div>
-<div class="cd"><div class="n">3</div><h3>Je reçois mon label</h3><p>Un score sur 100 et l'un des quatre niveaux du label, expliqué en mots simples.</p></div>
-</div></div></div>
-<div class="sec"><div class="w"><div class="assure">
-<svg viewBox="0 0 24 24" fill="none" stroke="#C3B29E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-<div><h3>Vos données restent chez vous.</h3><p>Le fichier est lu directement dans votre navigateur. Il n'est envoyé nulle part et rien n'est conservé. La participation est volontaire.</p></div></div></div></div>
-</div>
+    <main id="main" tabindex="-1">
+      <div class="w">
+        <div class="hero">
+          <div>
+            <span class="tag">L'égalité reconnue</span>
+            <h1>Les salaires sont-ils <span>vraiment</span> égaux ?</h1>
+            <p class="l">
+              Déposez un fichier de paie anonymisé. En quelques secondes, Égalys
+              mesure l'écart entre femmes et hommes et vous remet un score et un
+              label.
+            </p>
+            <div class="btns">
+              <a class="btn" href="analyse.html">Mesurer mon écart</a
+              ><a class="btn o" href="label.html">Découvrir le label</a>
+            </div>
+          </div>
+          <div class="lg">
+            <svg
+              viewBox="0 0 100 112"
+              role="img"
+              aria-label="Logo Égalys : deux personnes autour d'un signe égal"
+            >
+              <use href="#mk" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="sec ca">
+        <div class="w">
+          <span class="k">Comment ça marche</span>
+          <h2>Trois étapes, aucune compétence technique.</h2>
+          <div class="cards">
+            <div class="cd">
+              <div class="n">1</div>
+              <h3>Je dépose mon fichier</h3>
+              <p>
+                Un tableau Excel ou CSV avec le genre, le poste et le salaire.
+                Sans aucun nom.
+              </p>
+            </div>
+            <div class="cd">
+              <div class="n">2</div>
+              <h3>Égalys calcule</h3>
+              <p>
+                L'écart est mesuré à poste comparable, pour comparer ce qui est
+                comparable.
+              </p>
+            </div>
+            <div class="cd">
+              <div class="n">3</div>
+              <h3>Je reçois mon label</h3>
+              <p>
+                Un score sur 100 et l'un des quatre niveaux du label, expliqué
+                en mots simples.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="w">
+          <div class="assure">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#C3B29E"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="4" y="10" width="16" height="11" rx="2" />
+              <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+            </svg>
+            <div>
+              <h3>Vos données restent chez vous.</h3>
+              <p>
+                Le fichier est lu directement dans votre navigateur. Il n'est
+                envoyé nulle part et rien n'est conservé. La participation est
+                volontaire.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-<!-- LABEL -->
-<div class="pg" data-p="label"><div class="w">
-<div class="ph"><span class="k">Le label Égalys</span><h1>Quatre niveaux pour situer et progresser.</h1><p class="sub">Le niveau dépend de l'écart réel de salaire à poste comparable. Chaque niveau indique le chemin à suivre.</p></div>
-<div class="lv">
-<div class="lr"><div class="d l1">1</div><div><h3>En progression</h3><p>Écart supérieur à 8 %. Un plan d'action est conseillé.</p></div><span class="s">Score inférieur à 60</span></div>
-<div class="lr"><div class="d l2">2</div><div><h3>Engagé</h3><p>Écart entre 5 et 8 %. La dynamique est lancée.</p></div><span class="s">Score de 60 à 74</span></div>
-<div class="lr"><div class="d l3">3</div><div><h3>Avancé</h3><p>Écart entre 2 et 5 %. L'égalité est presque atteinte.</p></div><span class="s">Score de 75 à 89</span></div>
-<div class="lr"><div class="d l4">4</div><div><h3>Excellence</h3><p>Écart inférieur à 2 %. Une référence pour tous.</p></div><span class="s">Score de 90 à 100</span></div>
-</div>
-<div style="padding:40px 0 80px"><a class="btn" href="#/analyse">Obtenir mon niveau</a></div>
-</div></div>
-
-<!-- ANALYSE -->
-<div class="pg" data-p="analyse"><div class="w">
-<div class="ph"><span class="k">Analyse</span><h1>Déposez votre fichier.</h1><p class="sub">Participation volontaire. Le fichier doit être anonymisé : ni nom, ni prénom.</p></div>
-<label class="drop" id="drop" for="file"><h3>Choisir ou glisser un fichier</h3><p>Formats acceptés : Excel (.xlsx, .xls) ou CSV</p></label>
-<input type="file" id="file" class="sr" accept=".csv,.xlsx,.xls,.txt">
-<div class="btns" style="margin-top:18px"><button class="btn o" id="demo">Essayer avec un exemple fictif</button></div>
-<div class="fmt"><b>Colonnes attendues</b><code>genre;poste;salaire
-F;Ingénieur;3850</code></div>
-<div id="err" role="alert"></div>
-<div id="res" aria-live="polite">
-<div class="top">
-<div class="pn g"><span class="k">Votre score</span><div class="big"><span id="sc">0</span><small> / 100</small></div>
-<div class="pbar" role="img" aria-label="Barre de score"><i id="pb"></i></div>
-<span class="lbl" id="lab"></span><p id="msg"></p></div>
-<div class="pn"><div class="kv" id="kv"></div><div id="bars"></div></div>
-</div>
-<div class="tw"><h3 style="font-size:1.5rem">Écart par poste</h3><p id="gn" style="color:var(--mu);margin:6px 0 14px"></p><table id="tb"></table></div>
-<div style="margin-top:28px"><button class="btn" onclick="print()">Imprimer ou enregistrer en PDF</button></div>
-</div>
-<div style="height:60px"></div>
-</div></div>
-
-<!-- AIDE -->
-<div class="pg" data-p="aide"><div class="w">
-<div class="ph"><span class="k">Aide</span><h1>Questions fréquentes.</h1></div>
-<div class="two">
-<div><h3>Comment est calculé le score ?</h3><ul><li>Écart = (moyenne hommes − moyenne femmes) ÷ moyenne hommes.</li><li>On compare poste par poste (au moins 3 femmes et 3 hommes), puis on pondère par l'effectif.</li><li>Sans colonne poste, l'écart médian global est utilisé.</li><li>Score = 100 − 5 × l'écart, entre 0 et 100.</li></ul></div>
-<div><h3>Que signifie un écart positif ?</h3><p>Les hommes gagnent en moyenne plus que les femmes à poste comparable. Plus l'écart est proche de 0 %, plus le score est élevé.</p></div></div>
-<div style="padding-bottom:80px">
-<details><summary>Mes données sont-elles envoyées quelque part ?</summary><p>Non. Le calcul se fait dans votre navigateur. En fermant la page, tout est effacé.</p></details>
-<details><summary>Quelles valeurs pour la colonne genre ?</summary><p>F, Femme, H, Homme ou M. Les majuscules et accents n'ont pas d'importance.</p></details>
-<details><summary>Le label a-t-il une valeur légale ?</summary><p>Non, il est indicatif. Il ne remplace pas l'Index de l'égalité professionnelle. Il ne prend pas en compte l'ancienneté ni le temps de travail, sauf si vous les intégrez au salaire déposé.</p></details>
-<details><summary>Pourquoi 3 femmes et 3 hommes minimum par poste ?</summary><p>Pour protéger l'anonymat : en dessous, un salaire individuel pourrait être deviné.</p></details>
-</div></div></div>
-</main>
-
-<footer><div class="w"><span class="brand"><svg aria-hidden="true" style="width:30px;height:34px"><use href="#mk"/></svg><span aria-hidden="true">ÉGΛLYS</span></span><span>L'égalité reconnue, les progrès démontrés.</span></div></footer>
-
-<script>
-const $=s=>document.querySelector(s),fmt=n=>Math.round(n).toLocaleString('fr-FR')+' €',pc=n=>n.toFixed(1).replace('.',',')+' %';
-const avg=a=>a.reduce((x,y)=>x+y,0)/a.length,med=a=>{const s=[...a].sort((x,y)=>x-y),m=s.length>>1;return s.length%2?s[m]:(s[m-1]+s[m])/2};
-const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
-function route(){const p=location.hash.replace('#/','');document.querySelectorAll('.pg').forEach(e=>e.classList.toggle('on',e.dataset.p===p));document.querySelectorAll('.nl a').forEach(a=>{a.classList.toggle('on',a.dataset.p===p);a.toggleAttribute('aria-current',a.dataset.p===p)});scrollTo(0,0)}
-addEventListener('hashchange',route);route();
-$('#tz').onclick=e=>{const b=document.documentElement.classList.toggle('big');e.target.setAttribute('aria-pressed',b)};
-const drop=$('#drop'),file=$('#file');
-drop.ondragover=e=>{e.preventDefault();drop.classList.add('o')};drop.ondragleave=()=>drop.classList.remove('o');
-drop.ondrop=e=>{e.preventDefault();drop.classList.remove('o');e.dataTransfer.files[0]&&load(e.dataTransfer.files[0])};
-file.onchange=()=>file.files[0]&&load(file.files[0]);
-function load(f){$('#err').textContent='';const r=new FileReader();r.onload=e=>{try{const wb=XLSX.read(e.target.result,{type:'array'});analyse(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,raw:true}))}catch(x){$('#err').textContent='Fichier illisible. Vérifiez son format.'}};r.readAsArrayBuffer(f)}
-$('#demo').onclick=()=>{const rows=[['genre','poste','salaire']],P={Technicien:[2600,22],Ingénieur:[3900,24],Commercial:[3300,20],Manager:[5200,12]};let s=7;const rnd=()=>(s=(s*9301+49297)%233280)/233280;
-for(const p in P)for(let i=0;i<P[p][1];i++){const g=i%2?'F':'H';rows.push([g,p,Math.round(P[p][0]*(1+(rnd()-.5)*.25)*(g==='F'?.96:1))])}analyse(rows)};
-const MSG=['Un écart important existe. Un plan d\'action sur les rémunérations est recommandé.','Des progrès sont visibles. Poursuivez les efforts pour réduire l\'écart restant.','Les salaires sont proches de l\'égalité. Encore un effort pour atteindre l\'excellence.','Bravo : les salaires sont quasiment égaux à poste comparable.'];
-function analyse(rows){
-const h=rows[0].map(norm),find=k=>h.findIndex(x=>k.some(y=>x.includes(y)));
-const ig=find(['genre','sexe','sex','gender']),is=find(['salaire','salary','brut','remuneration','paie']),ip=find(['poste','categorie','fonction','job','emploi','metier']);
-if(ig<0||is<0)return $('#err').textContent='Colonnes introuvables : il faut au minimum « genre » et « salaire » dans la première ligne.';
-const d=[];for(const r of rows.slice(1)){const g=norm(r[ig])[0];let v=r[is];if(typeof v==='string')v=parseFloat(v.replace(/[\s€\u00a0]/g,'').replace(',','.'));if(!(v>0)||!['f','h','m'].includes(g))continue;d.push({g:g==='f'?'F':'H',v,p:ip>=0&&r[ip]?String(r[ip]).trim():null})}
-const F=d.filter(x=>x.g==='F').map(x=>x.v),H=d.filter(x=>x.g==='H').map(x=>x.v);
-if(F.length<3||H.length<3)return $('#err').textContent='Il faut au moins 3 femmes et 3 hommes avec un salaire valide.';
-const gap=(a,b)=>(avg(b)-avg(a))/avg(b)*100,gA=gap(F,H),gM=(med(H)-med(F))/med(H)*100;
-const G={};d.forEach(x=>{if(x.p)(G[x.p]=G[x.p]||{F:[],H:[]})[x.g].push(x.v)});
-const gl=Object.entries(G).filter(([,v])=>v.F.length>=3&&v.H.length>=3).map(([k,v])=>({k,nf:v.F.length,nh:v.H.length,mf:avg(v.F),mh:avg(v.H),e:gap(v.F,v.H)}));
-let adj,note;if(gl.length){const n=gl.reduce((s,x)=>s+x.nf+x.nh,0);adj=gl.reduce((s,x)=>s+x.e*(x.nf+x.nh),0)/n;note='Postes avec au moins 3 femmes et 3 hommes ('+gl.length+' retenus). Un écart positif signifie que les hommes gagnent plus.'}else{adj=gM;note="Pas de postes comparables : l'écart médian global est utilisé."}
-const sc=Math.max(0,Math.min(100,Math.round(100-5*Math.abs(adj)))),i=sc>=90?3:sc>=75?2:sc>=60?1:0;
-$('#res').style.display='block';$('#sc').textContent=sc;$('#lab').textContent=['En progression','Engagé','Avancé','Excellence'][i];$('#msg').textContent=MSG[i];
-$('#pb').style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>$('#pb').style.width=sc+'%'));
-$('#kv').innerHTML=[[pc(adj),'Écart à poste comparable'],[pc(gA),'Écart moyen global'],[pc(gM),'Écart médian global'],[F.length+' F · '+H.length+' H','Personnes analysées']].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
-const mx=Math.max(avg(F),avg(H));
-$('#bars').innerHTML=[['Femmes',avg(F),'var(--be2)'],['Hommes',avg(H),'var(--pt)']].map(x=>`<div class="bar"><span style="width:72px">${x[0]}</span><i style="width:${x[1]/mx*52}%;background:${x[2]}"></i><b>${fmt(x[1])}</b></div>`).join('')+'<span style="font-size:.9rem;color:var(--mu)">Salaire moyen</span>';
-$('#gn').textContent=note;
-$('#tb').innerHTML=gl.length?'<tr><th>Poste</th><th>Femmes</th><th>Hommes</th><th>Moy. F</th><th>Moy. H</th><th>Écart</th></tr>'+gl.map(x=>`<tr><td>${x.k.replace(/</g,'&lt;')}</td><td>${x.nf}</td><td>${x.nh}</td><td>${fmt(x.mf)}</td><td>${fmt(x.mh)}</td><td><b>${pc(x.e)}</b></td></tr>`).join(''):'<tr><td>Aucun poste exploitable</td></tr>';
-$('#res').scrollIntoView({behavior:'smooth'})}
-</script>
-</body>
+    <footer>
+      <div class="w">
+        <span class="brand"
+          ><svg aria-hidden="true" style="width: 30px; height: 34px">
+            <use href="#mk" /></svg
+          ><span aria-hidden="true">ÉGΛLYS</span></span
+        ><span>L'égalité reconnue, les progrès démontrés.</span>
+      </div>
+    </footer>
+  </body>
 </html>

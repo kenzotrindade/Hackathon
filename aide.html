@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <title>Aide – Égalys</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="mk" viewBox="0 0 100 112">
+          <circle cx="36" cy="12" r="9.5" fill="#0F4C45" />
+          <circle cx="72" cy="10" r="8" fill="#C3B29E" />
+          <path
+            d="M49 32A36 36 0 0 0 49 104L49 91A23 23 0 0 1 49 45Z"
+            fill="#0F4C45"
+          />
+          <path
+            d="M55 32A36 36 0 0 1 55 104L55 91A23 23 0 0 0 55 45Z"
+            fill="#C3B29E"
+          />
+          <rect x="39" y="60" width="26" height="6" fill="#C3B29E" />
+          <rect x="39" y="72" width="26" height="6" fill="#9aa592" />
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip" href="#main">Aller au contenu</a>
+    <header>
+      <div class="w">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html" aria-label="Égalys, accueil"
+            ><svg aria-hidden="true"><use href="#mk" /></svg
+            ><span aria-hidden="true">ÉGΛLYS</span></a
+          >
+          <div class="nl">
+            <a href="index.html">Accueil</a><a href="label.html">Le label</a
+            ><a href="analyse.html">Analyser</a
+            ><a href="aide.html" class="on" aria-current="page">Aide</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="w">
+        <div class="ph">
+          <span class="k">Aide</span>
+          <h1>Questions fréquentes.</h1>
+        </div>
+        <div class="two">
+          <div>
+            <h3>Comment est calculé le score ?</h3>
+            <ul>
+              <li>
+                Écart = (moyenne hommes − moyenne femmes) ÷ moyenne hommes.
+              </li>
+              <li>
+                On compare poste par poste (au moins 3 femmes et 3 hommes), puis
+                on pondère par l'effectif.
+              </li>
+              <li>Sans colonne poste, l'écart médian global est utilisé.</li>
+              <li>Score = 100 − 5 × l'écart, entre 0 et 100.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Que signifie un écart positif ?</h3>
+            <p>
+              Les hommes gagnent en moyenne plus que les femmes à poste
+              comparable. Plus l'écart est proche de 0 %, plus le score est
+              élevé.
+            </p>
+          </div>
+        </div>
+        <div style="padding-bottom: 80px">
+          <details>
+            <summary>Mes données sont-elles envoyées quelque part ?</summary>
+            <p>
+              Non. Le calcul se fait dans votre navigateur. En fermant la page,
+              tout est effacé.
+            </p>
+          </details>
+          <details>
+            <summary>Quelles valeurs pour la colonne genre ?</summary>
+            <p>
+              F, Femme, H, Homme ou M. Les majuscules et accents n'ont pas
+              d'importance.
+            </p>
+          </details>
+          <details>
+            <summary>Le label a-t-il une valeur légale ?</summary>
+            <p>
+              Non, il est indicatif. Il ne remplace pas l'Index de l'égalité
+              professionnelle. Il ne prend pas en compte l'ancienneté ni le
+              temps de travail, sauf si vous les intégrez au salaire déposé.
+            </p>
+          </details>
+          <details>
+            <summary>Pourquoi 3 femmes et 3 hommes minimum par poste ?</summary>
+            <p>
+              Pour protéger l'anonymat : en dessous, un salaire individuel
+              pourrait être deviné.
+            </p>
+          </details>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="w">
+        <span class="brand"
+          ><svg aria-hidden="true" style="width: 30px; height: 34px">
+            <use href="#mk" /></svg
+          ><span aria-hidden="true">ÉGΛLYS</span></span
+        ><span>L'égalité reconnue, les progrès démontrés.</span>
+      </div>
+    </footer>
+  </body>
+</html>
