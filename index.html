@@ -15,32 +15,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <defs>
-        <symbol id="mk" viewBox="0 0 100 112">
-          <circle cx="36" cy="12" r="9.5" fill="#0F4C45" />
-          <circle cx="72" cy="10" r="8" fill="#C3B29E" />
-          <path
-            d="M49 32A36 36 0 0 0 49 104L49 91A23 23 0 0 1 49 45Z"
-            fill="#0F4C45"
-          />
-          <path
-            d="M55 32A36 36 0 0 1 55 104L55 91A23 23 0 0 0 55 45Z"
-            fill="#C3B29E"
-          />
-          <rect x="39" y="60" width="26" height="6" fill="#C3B29E" />
-          <rect x="39" y="72" width="26" height="6" fill="#9aa592" />
-        </symbol>
-      </defs>
-    </svg>
-    <a class="skip" href="#main">Aller au contenu</a>
     <header>
       <div class="w">
         <nav aria-label="Navigation principale">
-          <a class="brand" href="index.html" aria-label="Égalys, accueil"
-            ><svg aria-hidden="true"><use href="#mk" /></svg
-            ><span aria-hidden="true">ÉGΛLYS</span></a
-          >
+          <a class="brand" href="index.html" aria-label="Égalys, accueil">
+            <img src="logo.svg" alt="Logo Egalys" />
+            <span aria-hidden="true">ÉGΛLYS</span>
+          </a>
           <div class="nl">
             <a href="index.html" class="on" aria-current="page">Accueil</a
             ><a href="label.html">Le label</a><a href="analyse.html">Analyser</a
@@ -67,13 +48,7 @@
             </div>
           </div>
           <div class="lg">
-            <svg
-              viewBox="0 0 100 112"
-              role="img"
-              aria-label="Logo Égalys : deux personnes autour d'un signe égal"
-            >
-              <use href="#mk" />
-            </svg>
+            <img src="logo.svg" alt="Logo Egalys" />
           </div>
         </div>
       </div>
@@ -109,42 +84,172 @@
           </div>
         </div>
       </div>
+
       <div class="sec">
         <div class="w">
-          <div class="assure">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#C3B29E"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <rect x="4" y="10" width="16" height="11" rx="2" />
-              <path d="M8 10V7a4 4 0 0 1 8 0v3" />
-            </svg>
-            <div>
-              <h3>Vos données restent chez vous.</h3>
-              <p>
-                Le fichier est lu directement dans votre navigateur. Il n'est
-                envoyé nulle part et rien n'est conservé. La participation est
-                volontaire.
+          <div id="res" style="padding: 0;">
+            <span class="k" style="margin-bottom: 18px">Exemple de résultat (données fictives)</span>
+            
+            <div class="top">
+              <div class="pn g">
+                <span class="k">Votre score</span>
+                <div class="big">82<small> / 100</small></div>
+                <div class="pbar"><i style="width: 82%"></i></div>
+                <span class="lbl">Avancé</span>
+                <p id="msg">
+                  Les salaires sont proches de l'égalité. Encore un effort pour
+                  atteindre l'excellence.
+                </p>
+              </div>
+              <div class="pn">
+                <div class="kv">
+                  <div><b>3,6 %</b><span>Écart à poste comparable</span></div>
+                  <div><b>4,1 %</b><span>Écart moyen global</span></div>
+                  <div><b>3,8 %</b><span>Écart médian global</span></div>
+                  <div><b>39 F · 39 H</b><span>Personnes analysées</span></div>
+                </div>
+                <div class="bar">
+                  <span style="width: 72px">Femmes</span>
+                  <i style="width: 50%; background: var(--be2)"></i>
+                  <b>3 480 €</b>
+                </div>
+                <div class="bar">
+                  <span style="width: 72px">Hommes</span>
+                  <i style="width: 52%; background: var(--pt)"></i>
+                  <b>3 630 €</b>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--mu)">Salaire moyen</span>
+              </div>
+            </div>
+
+            <div class="tw">
+              <h3 style="font-size: 1.5rem">Écart par poste</h3>
+              <p style="color: var(--mu); margin: 6px 0 14px">
+                Postes avec au moins 3 femmes et 3 hommes. Un écart positif
+                signifie que les hommes gagnent plus.
               </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Poste</th>
+                    <th>Femmes</th>
+                    <th>Hommes</th>
+                    <th>Moy. F</th>
+                    <th>Moy. H</th>
+                    <th>Écart</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Technicien</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>2 560 €</td>
+                    <td>2 640 €</td>
+                    <td><b>3,0 %</b></td>
+                  </tr>
+                  <tr>
+                    <td>Ingénieur</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>3 760 €</td>
+                    <td>3 960 €</td>
+                    <td><b>5,1 %</b></td>
+                  </tr>
+                  <tr>
+                    <td>Commercial</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>3 240 €</td>
+                    <td>3 330 €</td>
+                    <td><b>2,7 %</b></td>
+                  </tr>
+                  <tr>
+                    <td>Manager</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>4 980 €</td>
+                    <td>5 130 €</td>
+                    <td><b>2,9 %</b></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="sec partners-sec">
+        <div class="w">
+          <span class="k">Nos Partenaires</span>
+          <h2>Ils nous font confiance</h2>
+        </div>
+
+        <div class="marquee-wrapper">
+          <!-- Étage 1 -->
+          <div class="marquee-container">
+            <div class="marquee-track left">
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="linkedin.jpg" alt="Logo LinkedIn">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="apec.png" alt="APEC Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="CPME.jpg" alt="CPME Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="education-nationale.jpg" alt="Education Nationale Logo">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-container">
+            <div class="marquee-track right">
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="ffb.jpg" alt="FFB Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="france-travail.jpg" alt="France Travail Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="ministere-du-travail.jpg" alt="Ministère du Travail Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="welcome.jpg" alt="Welcome to The Jungle Logo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
     </main>
 
     <footer>
       <div class="w">
         <span class="brand"
-          ><svg aria-hidden="true" style="width: 30px; height: 34px">
-            <use href="#mk" /></svg
-          ><span aria-hidden="true">ÉGΛLYS</span></span
+          ><img src="logo.svg" alt="Logo Egalys" />
+          <span aria-hidden="true">ÉGΛLYS</span></span
         ><span>L'égalité reconnue, les progrès démontrés.</span>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
