@@ -15,17 +15,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="logo.png">
-    <a class="skip" href="#main">Aller au contenu</a>
     <header>
       <div class="w">
         <nav aria-label="Navigation principale">
-          <a class="brand" href="index.html" aria-label="Égalys, accueil"
-            ><svg aria-hidden="true"><use href="#mk" /></svg>
+          <a class="brand" href="index.html" aria-label="Égalys, label">
+            <img src="logo.svg" alt="Logo Egalys">
             <span aria-hidden="true">ÉGΛLYS</span></a>
           <div class="nl">
             <a href="index.html">Accueil</a>
             <a href="label.html" class="on" aria-current="page">Label</a><a href="aide.html">Aide</a>
+            <a href="login.html">Connexion</a>
           </div>
         </nav>
       </div>
@@ -75,17 +74,35 @@
             <span class="s">Score de 90 à 100</span>
           </div>
         </div>
-        <div style="padding: 40px 0 80px">
-          <a class="btn" href="analyse.html">Obtenir mon niveau</a>
+      </div>
+
+      <!-- Analyse -->
+      <div class="w">
+        <div class="ph">
+          <span class="k">Analyse</span>
+          <h1>Déposez votre fichier.</h1>
+          <p class="sub">
+            Participation volontaire. Le fichier doit être anonymisé : ni nom,
+            ni prénom.
+          </p>
+        </div>
+        <label class="drop" for="file"
+          ><h3>Choisir ou glisser un fichier</h3>
+          <p>Formats acceptés : Excel (.xlsx, .xls) ou CSV</p></label>
+        <input type="file" id="file" class="sr" accept=".csv,.xlsx,.xls,.txt" />
+        <div class="fmt">
+          <b>Colonnes attendues</b
+          ><code>genre;poste;salaire F;Ingénieur;3850</code>
         </div>
       </div>
+
     </main>
 
     <footer>
       <div class="w">
         <span class="brand"
           >
-        <img src="logo.png">
+        <img src="logo.svg">
         <span aria-hidden="true">ÉGΛLYS</span></span
         ><span>L'égalité reconnue, les progrès démontrés.</span>
       </div>

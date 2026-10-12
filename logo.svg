@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112" width="200" height="224">
+  <!-- Cercles supérieurs -->
+  <circle cx="36" cy="12" r="9.5" fill="#0F4C45" />
+  <circle cx="72" cy="10" r="8" fill="#C3B29E" />
+
+  <!-- Arcs / Formes semi-circulaires -->
+  <path d="M49 32A36 36 0 0 0 49 104L49 91A23 23 0 0 1 49 45Z" fill="#0F4C45" />
+  <path d="M55 32A36 36 0 0 1 55 104L55 91A23 23 0 0 0 55 45Z" fill="#C3B29E" />
+
+  <!-- Rectangles / Barres horizontales -->
+  <rect x="39" y="60" width="26" height="6" fill="#C3B29E" />
+  <rect x="39" y="72" width="26" height="6" fill="#9aa592" />
+</svg>

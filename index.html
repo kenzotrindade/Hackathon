@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <title>Égalys – L'égalité reconnue, les progrès démontrés</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="w">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html" aria-label="Égalys, accueil">
+            <img src="logo.svg" alt="Logo Egalys" />
+            <span aria-hidden="true">ÉGΛLYS</span>
+          </a>
+          <div class="nl">
+            <a href="index.html" class="on" aria-current="page">Accueil</a
+            ><a href="label.html">Le label</a><a href="analyse.html">Analyser</a
+            ><a href="aide.html">Aide</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="w">
+        <div class="hero">
+          <div>
+            <span class="tag">L'égalité reconnue</span>
+            <h1>Les salaires sont-ils <span>vraiment</span> égaux ?</h1>
+            <p class="l">
+              Déposez un fichier de paie anonymisé. En quelques secondes, Égalys
+              mesure l'écart entre femmes et hommes et vous remet un score et un
+              label.
+            </p>
+            <div class="btns">
+              <a class="btn" href="analyse.html">Mesurer mon écart</a
+              ><a class="btn o" href="label.html">Découvrir le label</a>
+            </div>
+          </div>
+          <div class="lg">
+            <img src="logo.svg" alt="Logo Egalys" />
+          </div>
+        </div>
+      </div>
+      <div class="sec ca">
+        <div class="w">
+          <span class="k">Comment ça marche</span>
+          <h2>Trois étapes, aucune compétence technique.</h2>
+          <div class="cards">
+            <div class="cd">
+              <div class="n">1</div>
+              <h3>Je dépose mon fichier</h3>
+              <p>
+                Un tableau Excel ou CSV avec le genre, le poste et le salaire.
+                Sans aucun nom.
+              </p>
+            </div>
+            <div class="cd">
+              <div class="n">2</div>
+              <h3>Égalys calcule</h3>
+              <p>
+                L'écart est mesuré à poste comparable, pour comparer ce qui est
+                comparable.
+              </p>
+            </div>
+            <div class="cd">
+              <div class="n">3</div>
+              <h3>Je reçois mon label</h3>
+              <p>
+                Un score sur 100 et l'un des quatre niveaux du label, expliqué
+                en mots simples.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="w">
+          <div id="res" style="padding: 0;">
+            <span class="k" style="margin-bottom: 18px">Exemple de résultat (données fictives)</span>
+            
+            <div class="top">
+              <div class="pn g">
+                <span class="k">Votre score</span>
+                <div class="big">82<small> / 100</small></div>
+                <div class="pbar"><i style="width: 82%"></i></div>
+                <span class="lbl">Avancé</span>
+                <p id="msg">
+                  Les salaires sont proches de l'égalité. Encore un effort pour
+                  atteindre l'excellence.
+                </p>
+              </div>
+              <div class="pn">
+                <div class="kv">
+                  <div><b>3,6 %</b><span>Écart à poste comparable</span></div>
+                  <div><b>4,1 %</b><span>Écart moyen global</span></div>
+                  <div><b>3,8 %</b><span>Écart médian global</span></div>
+                  <div><b>39 F · 39 H</b><span>Personnes analysées</span></div>
+                </div>
+                <div class="bar">
+                  <span style="width: 72px">Femmes</span>
+                  <i style="width: 50%; background: var(--be2)"></i>
+                  <b>3 480 €</b>
+                </div>
+                <div class="bar">
+                  <span style="width: 72px">Hommes</span>
+                  <i style="width: 52%; background: var(--pt)"></i>
+                  <b>3 630 €</b>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--mu)">Salaire moyen</span>
+              </div>
+            </div>
+
+            <div class="tw">
+              <h3 style="font-size: 1.5rem">Écart par poste</h3>
+              <p style="color: var(--mu); margin: 6px 0 14px">
+                Postes avec au moins 3 femmes et 3 hommes. Un écart positif
+                signifie que les hommes gagnent plus.
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Poste</th>
+                    <th>Femmes</th>
+                    <th>Hommes</th>
+                    <th>Moy. F</th>
+                    <th>Moy. H</th>
+                    <th>Écart</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Technicien</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>2 560 €</td>
+                    <td>2 640 €</td>
+                    <td><b>3,0 %</b></td>
+                  </tr>
+                  <tr>
+                    <td>Ingénieur</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>3 760 €</td>
+                    <td>3 960 €</td>
+                    <td><b>5,1 %</b></td>
+                  </tr>
+                  <tr>
+                    <td>Commercial</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>3 240 €</td>
+                    <td>3 330 €</td>
+                    <td><b>2,7 %</b></td>
+                  </tr>
+                  <tr>
+                    <td>Manager</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>4 980 €</td>
+                    <td>5 130 €</td>
+                    <td><b>2,9 %</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec partners-sec">
+        <div class="w">
+          <span class="k">Nos Partenaires</span>
+          <h2>Ils nous font confiance</h2>
+        </div>
+
+        <div class="marquee-wrapper">
+          <!-- Étage 1 -->
+          <div class="marquee-container">
+            <div class="marquee-track left">
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="linkedin.jpg" alt="Logo LinkedIn">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="apec.png" alt="APEC Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="CPME.jpg" alt="CPME Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="education-nationale.jpg" alt="Education Nationale Logo">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-container">
+            <div class="marquee-track right">
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="ffb.jpg" alt="FFB Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="france-travail.jpg" alt="France Travail Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="ministere-du-travail.jpg" alt="Ministère du Travail Logo">
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="logo-placeholder">
+                  <img src="welcome.jpg" alt="Welcome to The Jungle Logo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </main>
+
+    <footer>
+      <div class="w">
+        <span class="brand"
+          ><img src="logo.svg" alt="Logo Egalys" />
+          <span aria-hidden="true">ÉGΛLYS</span></span
+        ><span>L'égalité reconnue, les progrès démontrés.</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

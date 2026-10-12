@@ -305,6 +305,13 @@ input:focus-visible {
   align-items: center;
   gap: 14px;
 }
+
+.footer__brand-logo {
+  display: block;
+  width: 30px;
+  height: 34px;
+  flex-shrink: 0;
+}
  
 .footer__name {
   font-size: 24px;
