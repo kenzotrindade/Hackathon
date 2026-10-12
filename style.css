@@ -346,6 +346,7 @@ h2 {
   padding: 8px 16px;
   border-radius: 99px;
   white-space: nowrap;
+  border: 3px solid var(--ln);
 }
 @media (max-width: 640px) {
   .lr {
@@ -358,15 +359,19 @@ h2 {
 }
 .l1 {
   background: var(--be2);
+  border: 3px solid var(--be);
 }
 .l2 {
   background: #6f8f86;
+  border: 3px solid var(--mu);
 }
 .l3 {
   background: #2c6b62;
+  border: 3px solid var(--pt);
 }
 .l4 {
   background: var(--pt);
+  border: 3px solid var(--pt2);
 }
 .drop {
   display: block;
