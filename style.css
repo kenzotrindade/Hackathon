@@ -805,10 +805,6 @@ footer .brand {
   padding: 16px;
   transition: border-color 0.4s ease, transform 0.4s ease;
 }
-.partner-card:hover {
-  border-color: var(--be2);
-  transform: translateY(-2px);
-}
 .partner-card img {
   max-width: 100%;
   max-height: 100%;
