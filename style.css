@@ -163,10 +163,6 @@ nav {
   color: var(--green);
   letter-spacing: 0.04em;
 }
-.brand:hover {
-  text-decoration: none;
-  color: var(--green);
-}
 .brand img {
   width: 36px;
   height: auto;
