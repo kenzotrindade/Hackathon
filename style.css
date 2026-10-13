@@ -288,7 +288,8 @@ nav {
     color 0.2s ease;
 }
 .btn:hover {
-  background: var(--pt2);
+  background: var(--ca);
+  border: var(--green) 1px solid;
   text-decoration: none;
 }
 .btn.o {
