@@ -7,30 +7,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-  <header class="header">
-    <div class="container header__inner">
-      <a href="/" class="brand">
-        <svg class="brand__logo" width="40" height="44" viewBox="0 0 40 44" role="img" aria-label="Logo Égalys">
-          <circle cx="12" cy="5" r="3" fill="#114E48"/>
-          <circle cx="28" cy="5" r="3" fill="#C4B29C"/>
-          <path d="M18 16 A11 11 0 0 0 18 38" fill="none" stroke="#114E48" stroke-width="5"/>
-          <path d="M22 16 A11 11 0 0 1 22 38" fill="none" stroke="#C4B29C" stroke-width="5"/>
-          <rect x="14" y="23" width="12" height="2.2" fill="#C4B29C"/>
-          <rect x="14" y="28" width="12" height="2.2" fill="#9BAA97"/>
-        </svg>
-        <span class="brand__name">ÉGALYS</span>
-      </a>
- 
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="/" class="nav__link">Accueil</a>
-        <a href="/label.html" class="nav__link">Label</a>
-        <a href="/aide.html" class="nav__link">Aide</a>
-        <a href="/login.html" class="nav__link nav__link--active" aria-current="page">Connexion</a>
-      </nav>
+  <header class=>
+    <div class="w">
+      <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html" aria-label="Égalys, label">
+            <img src="logo.svg" alt="Logo Egalys">
+            <span aria-hidden="true">ÉGΛLYS</span></a>
+          <div class="nl">
+            <a href="/">Accueil</a>
+            <a href="label.html">Label</a>
+            <a href="actualites.html">Actualités</a>
+            <a href="aide.html">Aide</a>
+            <a href="login.html" aria-current="page" class="on">Connexion</a>
+          </div>
+        </nav>
     </div>
   </header>
  
@@ -82,15 +76,15 @@
  
   </main>
  
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img class="footer__brand-logo" src="logo.svg" alt="Logo Égalys" width="30" height="34">
-        <span class="footer__name">ÉGALYS</span>
+  <footer>
+      <div class="w">
+        <span class="brand"
+          >
+        <img src="logo.svg">
+        <span aria-hidden="true">ÉGΛLYS</span></span
+        ><span>L'égalité reconnue, les progrès démontrés.</span>
       </div>
-      <span class="footer__tagline">L'égalité reconnue, les progrès démontrés.</span>
-    </div>
-  </footer>
+    </footer>
  
 </body>
 </html>

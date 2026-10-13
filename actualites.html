@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Égalys – Actualités</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+      <div class="w">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html" aria-label="Égalys, label">
+            <img src="logo.svg" alt="Logo Egalys">
+            <span aria-hidden="true">ÉGΛLYS</span></a>
+          <div class="nl">
+            <a href="/">Accueil</a>
+            <a href="label.html">Label</a>
+            <a href="actualites.html" class="on" aria-current="page">Actualités</a>
+            <a href="aide.html">Aide</a>
+            <a href="login.html">Connexion</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  <main>
+
+    <section class="container intro">
+      <span class="badge">ACTUALITÉS</span>
+      <h1 class="intro__title">Les nouvelles <span class="accent">d'Égalys.</span></h1>
+      <p class="intro__text">Nouveaux partenaires, nouvelle façon d'obtenir son label, chiffres clés : tout ce qui bouge autour de l'égalité salariale.</p>
+    </section>
+
+    <section class="container section section--tight" aria-labelledby="partner-title">
+      <article class="partner">
+        <div class="partner__content">
+          <p class="partner__meta">
+            <span class="partner__tag">NOUVEAU PARTENAIRE</span>
+            <span class="partner__date">Date de l'annonce</span>
+          </p>
+          <h2 id="partner-title" class="partner__title">Nom du partenaire rejoint Égalys</h2>
+          <p class="partner__text">Quelques lignes pour présenter le partenaire, ce qu'il fait et ce que ce partenariat change pour les organisations qui utilisent Égalys.</p>
+          <ul class="partner__points">
+            <li>Ce que le partenaire apporte à Égalys</li>
+            <li>Ce que ça change pour les utilisateurs</li>
+          </ul>
+          <a href="#" class="btn btn--light">Lire l'annonce</a>
+        </div>
+        <div class="partner__logo" role="img" aria-label="Emplacement du logo du partenaire">
+          <img src="apec.png" alt="Logo apec">
+        </div>
+      </article>
+    </section>
+
+    <section class="container section" aria-labelledby="stats-title">
+      <p class="eyebrow">ÉGALYS EN CHIFFRES (DONNÉES FICTIVES)</p>
+      <h2 id="stats-title" class="section__title">Ce que disent les analyses.</h2>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__value">1 240</span>
+          <span class="stat__label">analyses réalisées</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">3,7 %</span>
+          <span class="stat__label">écart moyen à poste comparable</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">72 %</span>
+          <span class="stat__label">des organisations aux niveaux 3 et 4</span>
+        </div>
+        <div class="stat stat--dark">
+          <span class="stat__value">−1,1 pt</span>
+          <span class="stat__label">d'écart moyen depuis fin 2025</span>
+        </div>
+      </div>
+
+      <div class="charts">
+        <div class="chart-card">
+          <h3 class="chart-card__title">Écart moyen par trimestre</h3>
+          <p class="chart-card__sub">À poste comparable, en %.</p>
+          <div class="vbars">
+            <div class="vbar">
+              <span class="vbar__value">4,8 %</span>
+              <span class="vbar__bar vbar__bar--1"></span>
+              <span class="vbar__label">T4 2025</span>
+            </div>
+            <div class="vbar">
+              <span class="vbar__value">4,4 %</span>
+              <span class="vbar__bar vbar__bar--2"></span>
+              <span class="vbar__label">T1 2026</span>
+            </div>
+            <div class="vbar">
+              <span class="vbar__value">4,0 %</span>
+              <span class="vbar__bar vbar__bar--3"></span>
+              <span class="vbar__label">T2 2026</span>
+            </div>
+            <div class="vbar">
+              <span class="vbar__value">3,7 %</span>
+              <span class="vbar__bar vbar__bar--4 vbar__bar--accent"></span>
+              <span class="vbar__label">T3 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <h3 class="chart-card__title">Répartition des niveaux du label</h3>
+          <p class="chart-card__sub">Part des organisations par niveau.</p>
+          <div class="hbars">
+            <div class="hbar">
+              <span class="hbar__label">Niveau 1</span>
+              <span class="hbar__track"><span class="hbar__fill hbar__fill--n1"></span></span>
+              <span class="hbar__value">8 %</span>
+            </div>
+            <div class="hbar">
+              <span class="hbar__label">Niveau 2</span>
+              <span class="hbar__track"><span class="hbar__fill hbar__fill--n2"></span></span>
+              <span class="hbar__value">20 %</span>
+            </div>
+            <div class="hbar">
+              <span class="hbar__label">Niveau 3</span>
+              <span class="hbar__track"><span class="hbar__fill hbar__fill--n3"></span></span>
+              <span class="hbar__value">41 %</span>
+            </div>
+            <div class="hbar">
+              <span class="hbar__label">Niveau 4</span>
+              <span class="hbar__track"><span class="hbar__fill hbar__fill--n4"></span></span>
+              <span class="hbar__value">31 %</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="method-title">
+      <div class="container">
+        <p class="eyebrow">NOUVEAUTÉ</p>
+        <h2 id="method-title" class="section__title">Une deuxième façon d'obtenir votre label.</h2>
+        <p class="band__intro">Pas de fichier de paie sous la main ? Choisissez le parcours qui vous convient.</p>
+
+        <div class="methods">
+          <article class="method">
+            <span class="method__tag">PARCOURS ACTUEL</span>
+            <h3 class="method__title">Le parcours express</h3>
+            <p class="method__text">Vous déposez un fichier anonymisé, Égalys calcule.</p>
+            <dl class="method__facts">
+              <div class="method__fact"><dt>Durée</dt><dd>Quelques secondes</dd></div>
+              <div class="method__fact"><dt>Il vous faut</dt><dd>Un fichier Excel ou CSV</dd></div>
+              <div class="method__fact"><dt>Vous obtenez</dt><dd>Un score et un label</dd></div>
+            </dl>
+            <a href="/analyser" class="btn btn--outline">Mesurer mon écart</a>
+          </article>
+
+          <article class="method method--new">
+            <span class="method__tag method__tag--new">NOUVEAU</span>
+            <h3 class="method__title">Le parcours accompagné</h3>
+            <p class="method__text">Vous répondez à un questionnaire, un expert valide vos données.</p>
+            <dl class="method__facts">
+              <div class="method__fact"><dt>Durée</dt><dd>Quelques jours</dd></div>
+              <div class="method__fact"><dt>Il vous faut</dt><dd>Un questionnaire et des justificatifs</dd></div>
+              <div class="method__fact"><dt>Vous obtenez</dt><dd>Un label validé par un expert</dd></div>
+            </dl>
+            <a href="#" class="btn btn--light">Découvrir ce parcours</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="articles-title">
+      <p class="eyebrow">À LIRE</p>
+      <h2 id="articles-title" class="section__title">Comprendre l'égalité salariale.</h2>
+
+      <div class="articles">
+        <article class="article">
+          <span class="article__tag">Comprendre</span>
+          <h3 class="article__title">Écart moyen ou écart médian : lequel regarder ?</h3>
+          <p class="article__text">Deux façons de mesurer, deux lectures différentes. On vous explique quand utiliser l'une ou l'autre.</p>
+          <a href="#" class="article__link">Lire l'article</a>
+        </article>
+        <article class="article">
+          <span class="article__tag">Méthode</span>
+          <h3 class="article__title">Pourquoi comparer à poste comparable ?</h3>
+          <p class="article__text">Comparer un manager et un technicien n'a pas de sens. Voici comment Égalys compare ce qui est comparable.</p>
+          <a href="#" class="article__link">Lire l'article</a>
+        </article>
+        <article class="article">
+          <span class="article__tag">Pratique</span>
+          <h3 class="article__title">Préparer un fichier de paie anonymisé</h3>
+          <p class="article__text">Le genre, le poste et le salaire suffisent. Aucun nom n'est nécessaire pour obtenir votre score.</p>
+          <a href="#" class="article__link">Lire l'article</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section section--last" aria-labelledby="cta-title">
+      <div class="cta">
+        <div>
+          <h2 id="cta-title" class="cta__title">Et vous, où en êtes-vous ?</h2>
+          <p class="cta__text">Déposez un fichier anonymisé et découvrez votre score en quelques secondes.</p>
+        </div>
+        <a href="/analyser" class="btn btn--light">Mesurer mon écart</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+      <div class="w">
+        <span class="brand"
+          ><img src="logo.svg" alt="Logo Egalys" />
+          <span aria-hidden="true">ÉGΛLYS</span></span
+        ><span>L'égalité reconnue, les progrès démontrés.</span>
+      </div>
+    </footer>
+
+</body>
+</html>
